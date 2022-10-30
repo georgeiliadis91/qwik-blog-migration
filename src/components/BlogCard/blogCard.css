@@ -1,0 +1,40 @@
+.blog-card-item {
+  border-radius: 3px;
+  color: #4c4c4c;
+  flex: 0 0 22%;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+}
+
+.blog-card-item a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 4px;
+  height: 100%;
+}
+
+span {
+  flex: 0 0 38px;
+  padding: 0 0.75rem;
+  color: #4c4c4c;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+img {
+  flex: 0 1 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+&:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
