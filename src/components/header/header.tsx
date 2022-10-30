@@ -9,7 +9,7 @@ export default component$(() => {
       <nav>
         <a href="/">Home</a>
         <a href="/blogs">Blog</a>
-        <a href="#contact-block">Contact</a>
+        <a href="/contact">Contact</a>
       </nav>
     </header>
   );
