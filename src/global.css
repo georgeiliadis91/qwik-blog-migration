@@ -21,12 +21,15 @@
 }
 
 body {
+  background-color: var(--qwik-white-secondary);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
 }
 
 main {
-  background-color: var(--qwik-white-secondary);
+  background-color: var(--qwik-white-main);
+  margin: 0 10%;
+  padding-bottom: 120px;
 }
 
 h1,

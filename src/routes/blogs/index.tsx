@@ -26,7 +26,7 @@ export default component$(() => {
             return (
               <BlogCard
                 title={blog.title}
-                img_href={blog.banner.url}
+                img_href={blog.banner.formats.thumbnail.url}
                 img_alt={blog.title}
                 blog_url={blog.slug}
               />

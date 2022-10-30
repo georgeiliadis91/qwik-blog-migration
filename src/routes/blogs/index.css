@@ -2,7 +2,6 @@ section.blog-section {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 0 10%;
   background-color: var(--qwik-white-main);
   padding: 36px 14px;
 }
