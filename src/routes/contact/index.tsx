@@ -1,5 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import ContactForm from "~/components/ContactForm/contactForm";
+import ContactForm from "~/components/contactForm/contactForm";
 import styles from "./index.css?inline";
 
 export default component$(() => {

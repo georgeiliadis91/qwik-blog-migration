@@ -33,7 +33,7 @@ main {
   background-color: var(--qwik-white-main);
   height: auto;
   min-height: 100vh;
-  border-radius: 430px/55% 0;
+  border-radius: 47%/480px 0;
 }
 
 h1,
@@ -164,5 +164,5 @@ a.mindblow:hover {
   height: auto;
   min-height: 100%;
   background-color: var(--qwik-dark-main);
-  border-radius: 310px/45% 0;
+  border-radius: 38%/360px 0;
 }
