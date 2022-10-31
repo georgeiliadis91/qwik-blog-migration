@@ -16,8 +16,8 @@ interface IHome {
   id: number;
   name: string;
   portofolio: string;
-  photo: object;
-  cv: object;
+  photo: any;
+  cv: any;
 }
 
 interface IPageInfo {
