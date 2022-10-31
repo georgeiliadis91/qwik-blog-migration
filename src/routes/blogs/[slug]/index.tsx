@@ -1,5 +1,6 @@
 import { Resource, component$, useStylesScoped$ } from "@builder.io/qwik";
 import { useEndpoint } from "@builder.io/qwik-city";
+import type { DocumentHead } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 const apiUrl = "https://admin.georgeiliadis.com";
 import Showdown from "showdown";
@@ -22,8 +23,11 @@ export default component$(() => {
       onRejected={() => <div>Error</div>}
       onResolved={(blogPost) => {
         // Not sure if this is the best approach check latter, i do not like this conversion
-        // sillyness but it works for now
-        const blogPostHtml = converter.makeHtml(blogPost[0].body);
+        // sillyness and the loading lazy attributes but it works for now
+        const blogPostHtml = converter
+          .makeHtml(blogPost[0].body)
+          .replace(/<img/g, '<img loading="lazy"');
+
         return (
           <div class="blog-container">
             <h2 class="blog-title">{blogPost[0].title}</h2>
@@ -42,3 +46,7 @@ export default component$(() => {
     />
   );
 });
+
+export const head: DocumentHead = {
+  title: "George Iliadis | Blogs",
+};
