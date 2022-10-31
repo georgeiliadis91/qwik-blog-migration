@@ -31,7 +31,7 @@ export default component$(() => {
               class="blog-banner-img"
               src={
                 "https://admin.georgeiliadis.com" +
-                blogPost[0].banner.formats.large.url
+                blogPost[0].banner.formats.medium.url
               }
               alt={blogPost[0].title + "img"}
             />

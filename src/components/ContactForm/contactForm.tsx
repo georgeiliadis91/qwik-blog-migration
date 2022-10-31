@@ -23,7 +23,7 @@ export default component$(() => {
     state[target.name as keyof IState] = target.value;
   });
   // 6Lft-PwUAAAAAPsEnuYvS81mMwMkoEyJBz99WjKI
-  const onSubmit = $(async (e: Event) => {
+  const submitForm = $(async (e: Event) => {
     e.preventDefault();
     //post to api
     fetch(apiUrl + "/message", {
@@ -46,7 +46,7 @@ export default component$(() => {
       <h2>Contact Me</h2>
       <form
         id="contact-form"
-        // onSubmit$={submitForm}
+        onSubmit$={submitForm}
         action="https://admin.georgeiliadis.com/message"
         preventdefault:submit
       >
