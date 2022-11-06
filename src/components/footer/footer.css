@@ -6,7 +6,6 @@ footer {
   background-color: var(--qwik-grey-main);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 1rem 4.75rem;
   color: var(--qwik-white-main);
 }

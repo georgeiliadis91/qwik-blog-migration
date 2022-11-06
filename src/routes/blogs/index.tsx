@@ -2,7 +2,7 @@ import { Resource, component$, useStylesScoped$ } from "@builder.io/qwik";
 import { useEndpoint } from "@builder.io/qwik-city";
 import BlogCard from "~/components/blogCard/blogCard";
 import type { RequestHandler } from "@builder.io/qwik-city";
-const apiUrl = "https://admin.georgeiliadis.com";
+import { apiUrl } from "~/constants";
 import styles from "./index.css?inline";
 
 export const onGet: RequestHandler<any> = async () => {

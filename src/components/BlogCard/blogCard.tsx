@@ -1,5 +1,6 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./blogCard.css?inline";
+import { apiUrl } from "~/constants";
 
 interface IProps {
   title: string;
@@ -9,8 +10,6 @@ interface IProps {
 }
 
 export default component$(({ blog_url, title, img_href, img_alt }: IProps) => {
-  // TODO: remove this, it is garbage
-  const apiUrl = "https://admin.georgeiliadis.com";
   useStylesScoped$(styles);
 
   return (

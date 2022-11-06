@@ -2,7 +2,7 @@ import { component$, Resource, useStylesScoped$ } from "@builder.io/qwik";
 import { useEndpoint } from "@builder.io/qwik-city";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
-const apiUrl = "https://admin.georgeiliadis.com";
+import { apiUrl } from "~/constants";
 import Showdown from "showdown";
 import styles from "./index.css";
 

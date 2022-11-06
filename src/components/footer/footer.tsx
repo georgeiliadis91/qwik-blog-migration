@@ -7,7 +7,6 @@ export default component$(() => {
   return (
     <footer>
       <span>Copyright 2022</span>
-      <div>icons here</div>
     </footer>
   );
 });

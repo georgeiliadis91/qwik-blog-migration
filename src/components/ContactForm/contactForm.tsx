@@ -1,5 +1,6 @@
 import { component$, useStore, useStylesScoped$, $ } from "@builder.io/qwik";
 import styles from "./contactForm.css?inline";
+import { apiUrl } from "~/constants";
 
 interface IState {
   name: string;
@@ -13,7 +14,6 @@ export default component$(() => {
     email: "",
     message: "",
   };
-  const apiUrl = "https://admin.georgeiliadis.com";
 
   useStylesScoped$(styles);
   const state = useStore<IState>(initState);

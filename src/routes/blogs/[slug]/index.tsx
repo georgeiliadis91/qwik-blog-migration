@@ -2,7 +2,7 @@ import { Resource, component$, useStylesScoped$ } from "@builder.io/qwik";
 import { useEndpoint } from "@builder.io/qwik-city";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
-const apiUrl = "https://admin.georgeiliadis.com";
+import { apiUrl } from "~/constants";
 import Showdown from "showdown";
 import styles from "./index.css";
 
@@ -39,7 +39,7 @@ export default component$(() => {
               }
               alt={blogPost[0].title + "img"}
             />
-            <div dangerouslySetInnerHTML={blogPostHtml} />
+            <div class="blog-body" dangerouslySetInnerHTML={blogPostHtml} />
           </div>
         );
       }}

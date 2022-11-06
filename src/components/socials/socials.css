@@ -1,0 +1,11 @@
+.social-links-container {
+  position: absolute;
+  right: 14px;
+  top: 62px;
+}
+
+.social-links-container img {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+}
