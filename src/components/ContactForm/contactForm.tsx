@@ -1,11 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import {
-  component$,
-  useRef,
-  useStore,
-  useStylesScoped$,
-  $,
-} from "@builder.io/qwik";
+import { component$, useStore, useStylesScoped$, $ } from "@builder.io/qwik";
 import styles from "./contactForm.css?inline";
 import { recaptchaKey, apiUrl } from "~/constants";
 
