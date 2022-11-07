@@ -6,7 +6,7 @@ export default component$(() => {
 
   return (
     <footer>
-      <span>Copyright 2022</span>
+      <span>George Iliadis - 2022</span>
     </footer>
   );
 });

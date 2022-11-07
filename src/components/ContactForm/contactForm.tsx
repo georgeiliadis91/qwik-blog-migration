@@ -1,6 +1,13 @@
-import { component$, useStore, useStylesScoped$, $ } from "@builder.io/qwik";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import {
+  component$,
+  useRef,
+  useStore,
+  useStylesScoped$,
+  $,
+} from "@builder.io/qwik";
 import styles from "./contactForm.css?inline";
-import { apiUrl } from "~/constants";
+import { recaptchaKey, apiUrl } from "~/constants";
 
 interface IState {
   name: string;
@@ -14,7 +21,6 @@ export default component$(() => {
     email: "",
     message: "",
   };
-
   useStylesScoped$(styles);
   const state = useStore<IState>(initState);
 
@@ -22,11 +28,11 @@ export default component$(() => {
     const target = ev.target as HTMLInputElement;
     state[target.name as keyof IState] = target.value;
   });
-  // 6Lft-PwUAAAAAPsEnuYvS81mMwMkoEyJBz99WjKI
+
   const submitForm = $(async (e: Event) => {
     e.preventDefault();
-    //post to api
-    fetch(apiUrl + "/message", {
+
+    fetch(apiUrl + "/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,6 +41,9 @@ export default component$(() => {
     })
       .then(() => {
         alert("Thanks for contacting me!");
+        state.name = "";
+        state.email = "";
+        state.message = "";
       })
       .catch(() => {
         alert("Message not sent!");
@@ -57,6 +66,7 @@ export default component$(() => {
             type="text"
             name="name"
             required
+            value={state.name}
             onInput$={updateField}
           />
         </label>
@@ -67,6 +77,7 @@ export default component$(() => {
             type="email"
             name="email"
             required
+            value={state.email}
             onInput$={updateField}
           />
         </label>
@@ -79,20 +90,14 @@ export default component$(() => {
             required
             minLength={24}
             rows={7}
+            value={state.message}
             onInput$={updateField}
           />
         </label>
-
-        <input
-          class="g-recaptcha"
-          data-sitekey="6Lft-PwUAAAAAPsEnuYvS81mMwMkoEyJBz99WjKI"
-          data-callback="onSubmit"
-          data-action="submit"
-          id="submit"
-          type="submit"
-          value="Submit"
-        />
+        <div class="g-recaptcha" data-sitekey={recaptchaKey}></div>
+        <input id="submit" type="submit" value="Submit" />
       </form>
+      <script src="https://www.google.com/recaptcha/api.js"></script>
     </section>
   );
 });
