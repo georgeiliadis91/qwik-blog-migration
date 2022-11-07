@@ -19,6 +19,7 @@
 }
 
 .blog-container img {
+  width: 100%;
   max-width: 100%;
   margin-bottom: 16px;
   object-fit: scale-down;
@@ -27,7 +28,4 @@
 .blog-container h3 {
   font-size: 24px;
   margin: 12px 0;
-}
-
-.blog-body {
 }
