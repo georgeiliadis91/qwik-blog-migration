@@ -4,3 +4,9 @@ section.blog-section {
   justify-content: center;
   padding: 36px 14px;
 }
+
+@media screen and (max-width: 768px) {
+  section.blog-section {
+    padding: 36px 0;
+  }
+}

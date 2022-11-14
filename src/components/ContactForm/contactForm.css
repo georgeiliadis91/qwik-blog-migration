@@ -52,19 +52,34 @@ textarea {
   resize: none;
 }
 
-.row1-name {
+.name {
   grid-column: 1/3;
 }
 
-.row1-email {
+.email {
   grid-column: 3/5;
 }
 
-.row2-text-area {
+.text-area {
   grid-column: 1/-1;
 }
 
 #submit {
   grid-column: 4/5;
   max-height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    display: block;
+  }
+
+  label {
+    margin-bottom: 16px;
+  }
+
+  .g-recaptcha {
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
 }

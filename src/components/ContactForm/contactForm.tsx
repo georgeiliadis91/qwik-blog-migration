@@ -53,7 +53,7 @@ export default component$(() => {
         action="https://admin.georgeiliadis.com/message"
         preventdefault:submit
       >
-        <label class="row1-name" for="name">
+        <label class="name" for="name">
           Name
           <input
             id="name"
@@ -64,7 +64,7 @@ export default component$(() => {
             onInput$={updateField}
           />
         </label>
-        <label class="row1-email" for="email">
+        <label class="email" for="email">
           Email
           <input
             id="email"
@@ -76,7 +76,7 @@ export default component$(() => {
           />
         </label>
 
-        <label class="row2-text-area" for="message">
+        <label class="text-area" for="message">
           Message
           <textarea
             id="message"

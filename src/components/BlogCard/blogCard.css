@@ -1,12 +1,13 @@
 .blog-card-item {
   border-radius: 3px;
   color: #4c4c4c;
-  flex: 0 0 22%;
+  flex: 0 0 28%;
   position: relative;
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s ease-in-out;
   margin: 1rem;
   background-color: var(--qwik-white-main);
 }
@@ -36,6 +37,18 @@ img {
   object-fit: cover;
 }
 
-&:hover {
+.blog-card-item:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .blog-card-item {
+    flex: 0 0 38%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .blog-card-item {
+    flex: 0 0 85%;
+  }
 }
