@@ -9,3 +9,9 @@ footer {
   padding: 1rem 4.75rem;
   color: var(--qwik-white-main);
 }
+
+@media screen and (max-width: 768px) {
+  footer {
+    position: relative;
+  }
+}

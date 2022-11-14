@@ -169,3 +169,17 @@ a.mindblow:hover {
   border-radius: 38%/360px 0;
   z-index: -5;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0 5%;
+  }
+
+  .green-layer {
+    background-color: var(--qwik-dark-main);
+  }
+
+  .blue-layer {
+    background-color: var(--qwik-dark-secondary);
+  }
+}

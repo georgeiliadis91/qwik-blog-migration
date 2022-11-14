@@ -14,6 +14,7 @@ export default component$(() => {
     email: "",
     message: "",
   };
+
   useStylesScoped$(styles);
   const state = useStore<IState>(initState);
 
