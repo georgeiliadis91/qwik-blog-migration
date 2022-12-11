@@ -37,7 +37,6 @@ export const onGet: RequestHandler<IPageInfo> = async () => {
 };
 
 export default component$(() => {
-  const url = "https://admin.georgeiliadis.com";
   useStylesScoped$(styles);
   const data = useEndpoint<typeof onGet>();
   const converter = new Showdown.Converter();
@@ -60,7 +59,7 @@ export default component$(() => {
                 <img
                   loading="lazy"
                   class="profile-image"
-                  src={url + homeData.photo.formats.thumbnail.url}
+                  src={apiUrl + homeData.photo.formats.thumbnail.url}
                   alt={homeData.name}
                   width="160"
                   height="160"
@@ -102,7 +101,11 @@ export default component$(() => {
             </div>
             <div class="cv-download">
               <p>You can download my CV here</p>
-              <a class="cv-link" href={url + homeData.cv.url} target="_blank">
+              <a
+                class="cv-link"
+                href={apiUrl + homeData.cv.url}
+                target="_blank"
+              >
                 Download
               </a>
             </div>
